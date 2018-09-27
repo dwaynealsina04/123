@@ -1,0 +1,211 @@
+<html>
+<head>
+ 
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    </head>
+
+    <style>
+         
+        @media print 
+{
+    
+ @page {
+ 
+  margin: 0;
+
+}
+}
+   .tablea, .tha, .tda {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.tha, .tda {
+    padding: 8px;
+    text-align: center;
+}
+        .tda
+        {
+           
+            font-size: 15.5;
+        }
+ 
+        .int1 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:3%;
+            margin-right: 20;
+}
+         .int2 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:8%;
+      margin-right: 12;
+           margin-left: 13;
+    }
+
+      .int3 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:32%;
+            margin-right: 3;
+           margin-left: 8;
+}
+         .int4 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:42%;
+              margin-right: 14;
+}
+         .int5 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:63.2%;
+}
+    .int6 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:18.5%;
+          
+              
+              
+    }
+    
+     .int7 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:4.5%;
+          
+              
+              
+    }
+                .int8 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:12%;
+            margin-right: 13;          
+     
+    }
+         .int9 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:8%;
+            margin-right: 205;  
+       
+    }
+                    .int10 {
+          
+    border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+           text-align: center;
+           width:20.7%;
+      margin-right: 20; 
+    }
+        .label
+        {
+            font-weight: bold;
+        }
+ .labellast
+        {
+            font-weight: bold;
+             margin-left: 102;
+            margin-right: 170;       
+        }
+        .labelfirst
+        {
+            font-weight: bold;
+             margin-left: 22;
+                margin-right: 90;  
+        }
+        
+     </style>
+
+    <body>
+  
+    <ul id = "container">
+        
+    <div id="printableArea" hidden >
+ 
+       
+           <table id="table" class= "tablea">
+        <tr class= "tra">
+            <th class= "tha">Code</th>
+            <th class= "tha">Subject Title</th>
+            <th class= "tha">Units</th> 
+            <th class= "tha">Days</th>
+             <th class= "tha">Time</th>
+             <th class= "tha">Room</th>
+             <th class= "tha">Grade</th>
+        </tr> 
+ 
+      
+    </table>
+ </div>
+ 
+    </ul>    
+ 
+<input type="button" onclick="printDiv('printableArea')" value="print a div!" />
+        
+     <script>
+            // Initialize Firebase
+           var config = {
+    apiKey: "AIzaSyDINKtjCvZS49qnG7MxT-5_auIA_q_vV4o",
+    authDomain: "udmenrollment.firebaseapp.com",
+    databaseURL: "https://udmenrollment.firebaseio.com",
+    projectId: "udmenrollment",
+    storageBucket: "udmenrollment.appspot.com",
+    messagingSenderId: "784741931841"
+  };
+            firebase.initializeApp(config);
+            
+            db.settings({ timestampsInSnapshots: true }); 
+        </script>
+        <script src="apptemp.js"></script>
+         <script>
+        function printDiv() 
+        {
+            
+     var printContents = document.getElementById('printableArea').innerHTML;
+      
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+ 
+}
+        </script>
+    
+    </body>
+    
+    
+     
+
+</html>
